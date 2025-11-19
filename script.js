@@ -16,6 +16,7 @@ form.addEventListener('submit', function(event) {
         mensagem.classList.remove('mostrar');
     }, 5000);
     setTimeout(function() {
-    window.location.href = "/";
+    window.location.href = "index.html";
     }, 600);
+
 });
