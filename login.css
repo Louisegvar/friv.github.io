@@ -1,0 +1,133 @@
+:root {
+    --roxo-principal: #8b5cf6;
+    --roxo-claro: #c4b5fd;
+    --lilás-claro: #ede9fe;
+    --branco: #ffffff;
+    --cinza: #000000;
+}
+
+/* Reset e estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--lilás-claro);
+    color: var(--cinza);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header.cabecalho {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--roxo-principal), var(--roxo-claro));
+    color: var(--branco);
+    border-bottom: 4px solid var(--roxo-claro);
+}
+
+header.cabecalho h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.formulario {
+    background-color: var(--branco);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+.formulario h2 {
+    color: var(--roxo-principal);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--roxo-claro);
+    border-radius: 6px;
+    margin-top: 0.4rem;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--roxo-principal);
+    color: var(--branco);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--roxo-claro);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--roxo-claro);
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+/* Mensagem de sucesso */
+.mensagem-sucesso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 18px;
+    padding: 0.7rem;
+    border-radius: 6px;
+    background-color: #ffed8a;
+    border: 1px solid #430b5a;
+    color: #35065c;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.mensagem-sucesso.mostrar{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mensagem-sucesso .titulo{
+    font-weight: 600;
+    display: block;
+}
+
+.mensagem-sucesso .sub{
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 4px;
+}
